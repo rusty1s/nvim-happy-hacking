@@ -38,7 +38,7 @@ return {
       vim.api.nvim_set_hl(0, "PmenuThumb", { bg = palette.base06 })
 
       -- Syntax Highlighting:
-      vim.api.nvim_set_hl(0, "Statement", { fg = palette.base0D, bold = true })
+      vim.api.nvim_set_hl(0, "Statement", { fg = palette.base0D })
       vim.api.nvim_set_hl(0, "Include", { fg = palette.base0D })
       vim.api.nvim_set_hl(0, "Exception", { fg = palette.base0D })
       vim.api.nvim_set_hl(0, "Keyword", { fg = palette.base0D })
@@ -46,6 +46,7 @@ return {
       vim.api.nvim_set_hl(0, "Repeat", { fg = palette.base0D })
       vim.api.nvim_set_hl(0, "Operator", { fg = palette.base0D })
       vim.api.nvim_set_hl(0, "Symbol", { fg = palette.base0D })
+      vim.api.nvim_set_hl(0, "Label", { fg = palette.base0D })
 
       vim.api.nvim_set_hl(0, "Function", { fg = palette.base0B })
       vim.api.nvim_set_hl(0, "Structure", { fg = palette.base0B })
@@ -57,7 +58,7 @@ return {
       vim.api.nvim_set_hl(0, "Constant", { fg = palette.base0E })
       vim.api.nvim_set_hl(0, "Number", { fg = palette.base0E })
       vim.api.nvim_set_hl(0, "Boolean", { fg = palette.base0E })
-      vim.api.nvim_set_hl(0, "Special", { fg = palette.base05 })
+      vim.api.nvim_set_hl(0, "Special", { fg = palette.base0D })
       vim.api.nvim_set_hl(0, "Delimiter", { fg = palette.base05 })
       vim.api.nvim_set_hl(0, "pythonFStringDelimiter", { fg = palette.base0E })
     end,
