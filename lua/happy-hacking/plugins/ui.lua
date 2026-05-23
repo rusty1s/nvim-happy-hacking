@@ -1,4 +1,33 @@
 return {
+  -- Color Scheme:
+  -- {
+  --   "echasnovski/mini.base16",
+  --   lazy = false,
+  --   priority = 1000,
+  --   config = function()
+  --     require("mini.base16").setup({
+  --       palette = {
+  --         base00 = "#292a2f", -- background
+  --         base01 = "#303238", -- black
+  --         base02 = "#3f424a",
+  --         base03 = "#7e8892", -- bright black / comments
+  --         base04 = "#b9bec4",
+  --         base05 = "#fcfcfd", -- foreground
+  --         base06 = "#f7f7f8",
+  --         base07 = "#ffffff",
+  --         base08 = "#ee8675", -- red
+  --         base09 = "#f5a85d", -- orange
+  --         base0A = "#ffd044", -- yellow
+  --         base0B = "#aad47f", -- green
+  --         base0C = "#9acfc3", -- cyan
+  --         base0D = "#325890", -- blue
+  --         base0E = "#f082b1", -- magenta
+  --         base0F = "#b47d5f",
+  --       },
+  --     })
+  --   end,
+  -- },
+
   -- Show open buffers in the tabline.
   {
     "akinsho/bufferline.nvim",
@@ -13,16 +42,16 @@ return {
       },
     },
     keys = {
-      { "<leader>1", "<cmd>BufferLineGoToBuffer 1<cr>" },
-      { "<leader>2", "<cmd>BufferLineGoToBuffer 2<cr>" },
-      { "<leader>3", "<cmd>BufferLineGoToBuffer 3<cr>" },
-      { "<leader>4", "<cmd>BufferLineGoToBuffer 4<cr>" },
-      { "<leader>5", "<cmd>BufferLineGoToBuffer 5<cr>" },
-      { "<leader>6", "<cmd>BufferLineGoToBuffer 6<cr>" },
-      { "<leader>7", "<cmd>BufferLineGoToBuffer 7<cr>" },
-      { "<leader>8", "<cmd>BufferLineGoToBuffer 8<cr>" },
-      { "<leader>9", "<cmd>BufferLineGoToBuffer 9<cr>" },
-      { "<leader>0", "<cmd>BufferLineGoToBuffer 10<cr>" },
+      { "<leader>1", function() require("bufferline").go_to(1, true) end },
+      { "<leader>2", function() require("bufferline").go_to(2, true) end },
+      { "<leader>3", function() require("bufferline").go_to(3, true) end },
+      { "<leader>4", function() require("bufferline").go_to(4, true) end },
+      { "<leader>5", function() require("bufferline").go_to(5, true) end },
+      { "<leader>6", function() require("bufferline").go_to(6, true) end },
+      { "<leader>7", function() require("bufferline").go_to(7, true) end },
+      { "<leader>8", function() require("bufferline").go_to(8, true) end },
+      { "<leader>9", function() require("bufferline").go_to(9, true) end },
+      { "<leader>0", function() require("bufferline").go_to(10, true) end },
     },
   },
 

@@ -1,11 +1,11 @@
 return {
   -- Fuzzy-find files, buffers, and text:
   {
-    "nvim-telescope/telescope.nvim",
-    cmd = "Telescope",
-    dependencies = { "nvim-lua/plenary.nvim" },
+    "ibhagwan/fzf-lua",
+    cmd = "FzfLua",
+    dependencies = { "nvim-tree/nvim-web-devicons" },
     keys = {
-      { "<leader><leader>", "<cmd>Telescope find_files<cr>" },
+      { "<leader><leader>", "<cmd>FzfLua files<cr>" },
     },
     opts = {},
   },

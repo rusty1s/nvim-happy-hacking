@@ -18,8 +18,14 @@ map("n", "q:", ":q")
 map("n", "<leader>m", "<cmd>silent make<cr>")
 map("n", "<leader>q", "<cmd>bdelete<cr>")
 map("n", "<leader>sv", function()
-  vim.cmd.source(vim.env.MYVIMRC)
-  vim.notify("Sourced " .. vim.fn.fnamemodify(vim.env.MYVIMRC, ":~:."))
+  local session = vim.fn.stdpath("state") .. "/reload-session.vim"
+  vim.cmd.mksession({ args = { session }, bang = true })
+  local command = string.format(
+    "restart lua vim.cmd.source(%q); vim.notify(%q)",
+    session,
+    "Reloaded config"
+  )
+  vim.cmd(command)
 end)
 
 -- Git Diff:
