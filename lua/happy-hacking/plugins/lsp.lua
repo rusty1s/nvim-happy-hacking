@@ -4,11 +4,21 @@ return {
     "mason-org/mason.nvim",
     opts = {},
   },
-  -- Configure Neovim's built-in LSP client: 
+  -- Configure Neovim's built-in LSP client:
   {
     "neovim/nvim-lspconfig",
     dependencies = { "mason-org/mason.nvim" },
     config = function()
+      -- Disable LSP syntax highlighting:
+      vim.api.nvim_create_autocmd("LspAttach", {
+        callback = function(args)
+          local client = vim.lsp.get_client_by_id(args.data.client_id)
+          if client then
+            client.server_capabilities.semanticTokensProvider = nil
+          end
+        end,
+      })
+
       vim.diagnostic.config({
         severity_sort = true,
         signs = true,

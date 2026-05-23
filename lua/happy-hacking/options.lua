@@ -36,4 +36,4 @@ opt.shiftwidth = 0
 opt.signcolumn = "yes"
 opt.colorcolumn = "+0"
 opt.termguicolors = true
-opt.background = "light"
+opt.background = "dark"
