@@ -30,6 +30,7 @@ return {
       vim.api.nvim_set_hl(0, "Todo", { fg = palette.base07, bold = true })
       vim.api.nvim_set_hl(0, "GitSignsChange", { fg = palette.base0A })
       vim.api.nvim_set_hl(0, "Visual", { fg = palette.base00, bg = palette.base0D })
+      vim.api.nvim_set_hl(0, "ColorColumn", { fg = palette.base00, bg = palette.base02 })
 
       -- Completion Menu:
       vim.api.nvim_set_hl(0, "Pmenu", { fg = palette.base07, bg = palette.base02 })
