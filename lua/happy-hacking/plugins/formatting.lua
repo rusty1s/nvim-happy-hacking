@@ -12,7 +12,7 @@ return {
         c = { "clang_format" },
         cpp = { "clang_format" },
         cuda = { "clang_format" },
-        python = { "yapf", "isort" },
+        python = { "ruff", "isort" },
       },
     },
   },
